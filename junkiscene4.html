@@ -4,6 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Scene4｜結語</title>
+  <script>
+    // 防止返回
+    history.pushState(null, null, location.href);
+    window.addEventListener("popstate", function () {
+      location.href = "index.html"; // 或換成 pushState 來禁止返回
+    });
+  </script>
   <style>
     body {
       font-family: 'Noto Sans TC', sans-serif;
