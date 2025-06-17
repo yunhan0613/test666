@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scene4｜結語</title>
+<meta charset="UTF-8">
+  <title>Scene4</title>
   <script>
-  // 禁止返回上一頁
-  history.pushState(null, null, location.href);
-  window.addEventListener("popstate", function () {
-    history.pushState(null, null, location.href);
-  });
-</script>
+    // 禁止使用者返回上一頁
+    window.history.pushState(null, null, location.href);
+    window.addEventListener('popstate', function () {
+      window.history.pushState(null, null, location.href);
+    });
+  </script>
+</head>
   <style>
     body {
       font-family: 'Noto Sans TC', sans-serif;
