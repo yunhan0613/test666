@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scene4｜結語</title>
+  <style>
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background-color: #fffefc;
+      padding: 2em;
+      line-height: 1.8;
+      animation: fadeIn 1.2s ease;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #ffffff;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    .scene-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 1.5em;
+    }
+    .ending {
+      font-size: 1.1em;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="scene-title"># Scene4｜結語</div>
+    <div class="ending" id="ending-text"></div>
+  </div>
+
+  <script>
+    const endings = [
+      `其實我一直都知道，哪怕我沒有說，妳也懂的吧。
+我喜歡妳。那不是因為妳懂我，而是……我想讓妳依靠我。`,
+
+      `我一直以為只要做好自己的事就好了。
+但現在才知道，我真正想做的，是讓妳笑。只對我笑。`,
+
+      `我沒什麼厲害的告白詞，也沒想過哪句話能打動妳。
+可是我知道，只要妳在我身邊，我就會更像我自己。`,
+
+      `喜歡妳這件事，我早就不想藏了。
+但我想等，等一個妳願意靠近我的瞬間——妳願意嗎？`
+    ];
+
+    // 隨機挑選一個結語
+    const randomEnding = endings[Math.floor(Math.random() * endings.length)];
+    document.getElementById('ending-text').textContent = randomEnding;
+  </script>
+</body>
+</html>
